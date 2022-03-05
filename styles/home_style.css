@@ -1,0 +1,74 @@
+header {
+    text-align: center;
+    color: brown;
+    font-size: 40px;
+    background-color: azure;
+}
+
+footer {
+    text-align: center;
+    color: brown;
+    font-size: 40px;
+    background-color: azure;
+}
+
+div {
+    margin: 10px;
+    background-color: bisque;
+}
+
+input{
+    margin: 5px;
+}
+
+form {
+    border-style: solid;
+    border-width: 1px;
+}
+
+#div_form {
+    width: fit-content;
+}
+
+#log_panel {
+    background-color: rgb(177, 175, 174);
+    margin-left: 10px;
+}
+
+#user_panel {
+    text-align: left;
+    border-style: solid;
+    border-width: 2px;
+}
+
+#user_panel > button {
+    width: auto;
+    height: 30px;
+    margin: 0;
+}
+
+#add_file_input {
+    background-color: blue;
+    border-radius: 100%;
+    border-width: 1px;
+}
+
+#rem_file_input {
+    background-color: red;
+    border-radius: 100%;
+    border-width: 1px;
+}
+
+#store_input_div {
+    background-color: brown;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: auto;
+    margin: auto;
+}
+
+#store_input {
+    display: block;
+    margin: 0 auto;
+    height: 30px;
+}

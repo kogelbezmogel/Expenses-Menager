@@ -1,0 +1,51 @@
+fieldset {
+    margin: auto;
+    text-align: center;
+    border-radius: 20px;
+    background-color: rgb(100, 100, 100);
+}
+
+body {
+    background-color: rgb(138, 138, 138);
+}
+
+div {
+    margin: auto;
+    margin-top: 100px;
+    width: fit-content;
+}
+
+input {
+    margin: 5px;
+    height: 40px;
+    width: 250px;
+    border-radius: 10px;
+    border-color: black;
+}
+
+.validate_info {
+    height: 25px;
+    width: auto;
+    margin: 0px;
+    padding-left: 10px;
+    background-color: rgb(190, 190, 190);
+    text-align: left;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+#send_button {
+    width: 150px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: cadetblue;
+}
+
+#send_button:hover {
+    background-color: rgb(60, 71, 82);
+}
+
+#send_button:disabled {
+    background-color: rgb(133, 167, 168);
+}
