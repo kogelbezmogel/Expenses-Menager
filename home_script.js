@@ -4,9 +4,6 @@ var inputs_number = 0;
 window.onload = () => {
     document.getElementById("add_files_button").addEventListener("click", addFileForm);
     document.getElementById("add_manually_button").addEventListener("click", addPaymentForm);
-    document.getElementById("login_button").addEventListener("click", logInForm);
-    document.getElementById("logout_button").addEventListener("click", logOut);
-    document.getElementById("signin_button").addEventListener("click", signInForm);
 }
 
 
@@ -33,7 +30,7 @@ function addFileForm() {
 
 function addFileInput() {
 
-    if (inputs_number < 4) {
+    if (inputs_number < 3) {
         inputs = document.getElementById("all_inputs");
         inputs_number++;
 

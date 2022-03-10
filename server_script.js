@@ -8,6 +8,7 @@ const { MongoClient } = require('mongodb');
 //including project modules
 const sign_validation = require('./modules/server_Auth.js');
 const adding_files = require('./modules/server_addingfile.js');
+const res = require('express/lib/response');
 
 const app = express();
 const port = 2137;
@@ -94,10 +95,27 @@ app.post('/LogIn', async function(req, res) {
         console.log("I found the Dude");
         req.session.user = req.body.log;
         req.session.save( (err) => { if(!err) console.log("saved the session"); } );
+        res.redirect('/Home');
     }
     else {
         console.log("Some problem accured");
+        res.redirect('/');
     }
+});
 
-    res.redirect('/');
+app.get('/Home', function(req, res) {
+    if( req.session ) {
+        res.sendFile( __dirname + '/home.html');
+    }
+    else {
+        res.redirect('/');
+    }
+});
+
+app.get('/home_style.css', function(req,res) {
+    res.sendFile( __dirname + '/styles/home_style.css');
+});
+
+app.get('/home_script.js', function(req, res) {
+    res.sendFile( __dirname + '/home_script.js');
 });
