@@ -1,0 +1,38 @@
+body {
+    background-color: antiquewhite;
+}
+
+header {
+    text-align: center;
+    background-color: rgb(107, 107, 173);
+    margin: auto;
+    height: 50px;
+}
+
+footer {
+    text-align: center;
+    background-color: rgb(107, 107, 173);
+    margin: auto;
+    height: 50px;
+}
+
+div {
+    width: 100%;
+    background-color: beige;
+}
+
+#log_panel {
+    width: 300px;
+    background-color: rgb(199, 250, 199);
+    float: left;
+}
+
+#desc_panel {
+    width: auto;
+    background-color: aqua;
+    float: left;
+}
+
+#clear_div {
+    clear: both;
+}
