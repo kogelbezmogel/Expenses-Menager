@@ -1,9 +1,9 @@
-
 var inputs_number = 0;
 
 window.onload = () => {
     document.getElementById("add_files_button").addEventListener("click", addFileForm);
     document.getElementById("add_manually_button").addEventListener("click", addPaymentForm);
+    document.getElementById("logout_button").addEventListener("click", logOut);
 }
 
 
@@ -126,17 +126,6 @@ function remFileInput() {
     }
 }
 
-
-function logInForm() {
-    window.location.href += "Auth/LogIn";
-}
-
-
-function signInForm() {
-    window.location.href += "Auth/SignIn";
-}
-
-
 async function logOut() {
 
     options = {
@@ -144,6 +133,9 @@ async function logOut() {
         headers: { "Content-Type": "text/plain" }
     }
 
-    response = await fetch('/Auth/Logout', options);
-    alert(await response.text());
+    await fetch('LogOut', options);
+    //response = await fetch('/LogOut', options);
+    //address = await response.text();
+    //window.location.href = address
+    window.location.reload();
 }

@@ -47,13 +47,17 @@ form {
     margin: 0;
 }
 
-#add_file_input {
+#add_inputs, #add_payment_input {
+    width: 25px;
+    height: 25px;
     background-color: blue;
     border-radius: 100%;
     border-width: 1px;
 }
 
-#rem_file_input {
+#rem_inputs, #rem_payment_input {
+    width: 25px;
+    height: 25px;
     background-color: red;
     border-radius: 100%;
     border-width: 1px;

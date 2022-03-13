@@ -21,10 +21,41 @@ div {
     background-color: beige;
 }
 
-#log_panel {
+button {
+    display: block;
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: rgb(123, 123, 218);
+}
+
+#container {
+    background-color: azure;
+    position: relative;
+    height: 300px;
     width: 300px;
-    background-color: rgb(199, 250, 199);
     float: left;
+}
+
+#log_panel {
+
+    padding-left: 20px;
+    padding-right: 20px;
+    border-style: solid;
+    border-width: 2px;
+    background-color: azure;
+    border-radius: 20px;
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+
+    top: 10%;
+    left: 15%;
+
 }
 
 #desc_panel {

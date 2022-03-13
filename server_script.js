@@ -103,11 +103,14 @@ app.post('/LogIn', async function(req, res) {
     }
 });
 
-app.get('/Home', function(req, res) {
-    if( req.session ) {
+app.get('/Home', async function(req, res) {
+
+    if( req.session.user ) {
+        console.log( req.session ); 
         res.sendFile( __dirname + '/home.html');
     }
     else {
+        console.log("Brak dostępu");
         res.redirect('/');
     }
 });
@@ -118,4 +121,17 @@ app.get('/home_style.css', function(req,res) {
 
 app.get('/home_script.js', function(req, res) {
     res.sendFile( __dirname + '/home_script.js');
+});
+
+app.get('/LogOut', async function(req, res) {
+
+    await client.connect();
+    await client.db(dbname).collection('sessions').deleteOne( {session: req.session} );
+    client.close();
+    req.session.destroy();
+
+    console.log("logging out...");
+    //address = req.protocol + "://" + req.headers.host;
+    //res.status(200).send( address );
+    res.end();
 });
