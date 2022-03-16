@@ -1,74 +1,98 @@
 header {
+    height: 60px;
+    border-radius: 15px;
+    margin-top: 5px;
+    margin-bottom: 10px;
     text-align: center;
-    color: brown;
     font-size: 40px;
-    background-color: azure;
+    background-color: rgb(107, 107, 173);
+}
+
+body {
+    background-color: rgb(66, 66, 66);
+}
+
+label {
+    font-size: 20px;
 }
 
 footer {
+    border-radius: 15px;
+    margin-top: 10px;
     text-align: center;
-    color: brown;
     font-size: 40px;
-    background-color: azure;
+    background-color: rgb(107, 107, 173);
 }
 
-div {
-    margin: 10px;
-    background-color: bisque;
-}
-
-input{
-    margin: 5px;
-}
-
-form {
-    border-style: solid;
-    border-width: 1px;
-}
 
 #div_form {
     width: fit-content;
+    background-color: beige;
 }
 
 #log_panel {
     background-color: rgb(177, 175, 174);
+}
+
+#logout_button {
+    height: 30px;
+    width: 80px;
+    border-radius: 10px;
+    border-style: none;
+    background-color: rgb(255, 205, 96);
+}
+
+#logout_button:hover {
+    background-color: rgb(107, 107, 173);
+}
+
+#logout_section {
+    height: 60px;
+    background-color: rgb(130, 130, 173);;
+    position: absolute;
+    margin-top: 5px;
+    margin-bottom: 10px;
     margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    top: 3px;
+    right: 60px;
 }
 
 #user_panel {
-    text-align: left;
-    border-style: solid;
-    border-width: 2px;
+    height: 100px;
 }
 
 #user_panel > button {
-    width: auto;
-    height: 30px;
-    margin: 0;
+    height: 60px;
+    width: 20%;
+    margin-right: 20px;
+    margin-left: 20px;
+    border-radius: 30px;
+    border-style: none;
+    background-color: rgb(255, 205, 96);
+}
+
+#user_panel > button:hover {
+    background-color: brown;
 }
 
 #add_inputs, #add_payment_input {
     width: 25px;
     height: 25px;
     background-color: blue;
-    border-radius: 100%;
-    border-width: 1px;
 }
 
 #rem_inputs, #rem_payment_input {
     width: 25px;
     height: 25px;
     background-color: red;
-    border-radius: 100%;
-    border-width: 1px;
 }
 
 #store_input_div {
     background-color: brown;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    width: auto;
-    margin: auto;
 }
 
 #store_input {

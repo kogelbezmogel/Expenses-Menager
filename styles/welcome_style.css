@@ -1,66 +1,79 @@
 body {
-    background-color: antiquewhite;
+    background-color: rgb(66, 66, 66);
+}
+
+h1 {
+    font-size: 30px;
 }
 
 header {
+    border-radius: 15px;
     text-align: center;
+    font-size: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     background-color: rgb(107, 107, 173);
     margin: auto;
+    margin-bottom: 10px;
     height: 50px;
 }
 
 footer {
+    border-radius: 15px;
     text-align: center;
     background-color: rgb(107, 107, 173);
     margin: auto;
+    margin-top: 10px;
     height: 50px;
 }
 
 div {
     width: 100%;
-    background-color: beige;
 }
 
 button {
     display: block;
-    width: 150px;
-    height: 30px;
+    width: 200px;
+    height: 40px;
     text-align: center;
     border-radius: 10px;
+    border-style: none;
 }
 
 button:hover {
-    background-color: rgb(123, 123, 218);
+    background-color: rgb(107, 107, 173);
 }
 
 #container {
-    background-color: azure;
-    position: relative;
-    height: 300px;
-    width: 300px;
+    border-radius: 15px;
+    background-color: rgb(156, 199, 131);
+    height: 75vh;
+    width: 25%;
+    min-width: 250px;
     float: left;
 }
 
 #log_panel {
-
+    margin: auto;
+    margin-top: 20%;
     padding-left: 20px;
     padding-right: 20px;
-    border-style: solid;
-    border-width: 2px;
-    background-color: azure;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgb(107, 107, 173);
     border-radius: 20px;
     width: fit-content;
     height: fit-content;
-    position: absolute;
-
-    top: 10%;
-    left: 15%;
-
 }
 
 #desc_panel {
-    width: auto;
-    background-color: aqua;
+    border-radius: 15px;
+    background-color: rgb(255, 205, 96);
+    padding-left: 4%;
+    margin-left: 1%;
+    width: 70%;
+    height: 75vh;
+    font-size: 20px;
     float: left;
 }
 
