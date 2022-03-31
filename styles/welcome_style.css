@@ -38,15 +38,20 @@ button {
     text-align: center;
     border-radius: 10px;
     border-style: none;
+    background-color: rgb(255, 205, 96);
 }
 
 button:hover {
-    background-color: rgb(107, 107, 173);
+    background-color: rgb(235, 185, 76);
+}
+
+button:active {
+    background-color: rgb(205, 155, 46);
 }
 
 #container {
     border-radius: 15px;
-    background-color: rgb(156, 199, 131);
+    background-color: rgb(107, 107, 173);
     height: 75vh;
     width: 25%;
     min-width: 250px;
@@ -60,7 +65,7 @@ button:hover {
     padding-right: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: rgb(107, 107, 173);
+    background-color: rgb(117, 117, 183);
     border-radius: 20px;
     width: fit-content;
     height: fit-content;

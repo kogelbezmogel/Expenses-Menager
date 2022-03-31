@@ -86,27 +86,40 @@ app.post('/LogIn', async function(req, res) {
 
     console.log( req.body );
 
-    await client.connect();
-    result = await client.db(dbname).collection('users').findOne( { log: req.body.log } );
+    let result;
+    try {
+        console.log( "Trying to log in user" );
+        await client.connect();
+        result = await client.db(dbname).collection('users').findOne( { log: req.body.log } );
+    } catch (e) {
+        console.log( "Login was not found \n" + e );
+    }
+    //console.log( `${ JSON.stringify(result)} \n ${JSON.stringify(req.body)}` );
 
-    console.log( `${ JSON.stringify(result)} \n ${JSON.stringify(req.body)}` );
-
-    if( result.pass == req.body.pass ) {
-        console.log("I found the Dude");
+    if( result && result.pass == req.body.pass ) {
+        console.log("User logged in");
         req.session.user = req.body.log;
         req.session.save( (err) => { if(!err) console.log("saved the session"); } );
         res.redirect('/Home');
     }
     else {
         console.log("Some problem accured");
-        res.redirect('/');
+        res.redirect('/Login/Form');
     }
+});
+
+app.get('/Get/UserName', function(req, res) {
+
+    if( req.session.user ) 
+        res.status(200).send( JSON.stringify(req.session.user) );
+    else
+        res.status(401).send("Acces denied");
 });
 
 app.get('/Home', async function(req, res) {
 
     if( req.session.user ) {
-        console.log( req.session ); 
+        //console.log( req.session ); 
         res.sendFile( __dirname + '/home.html');
     }
     else {

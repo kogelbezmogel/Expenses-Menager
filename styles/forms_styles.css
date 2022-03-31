@@ -21,7 +21,7 @@ input {
     height: 40px;
     width: 250px;
     border-radius: 10px;
-    border-color: black;
+    border-style: none;
 }
 
 .validate_info {
@@ -33,24 +33,36 @@ input {
     text-align: left;
     font-size: 10px;
     font-weight: bold;
-    border-radius: 5px;
+    font-family: monospace;
+    border-radius: 10px;
 }
 
 .input_fieldset {
     background-color: rgb(255, 205, 96);
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+form {
+    width: 350px;
 }
 
 #send_button {
     width: 150px;
-    margin-top: 20px;
+    margin-top: 40px;
+    margin-bottom: 30px;
     border-radius: 10px;
-    background-color: rgb(156, 199, 131);
+    background-color: rgb(255, 205, 96);
 }
 
 #send_button:hover {
-    background-color: rgb(60, 71, 82);
+    background-color: rgb(235, 185, 76);
+}
+
+#send_button:active {
+    background-color: rgb(205, 155, 46);
 }
 
 #send_button:disabled {

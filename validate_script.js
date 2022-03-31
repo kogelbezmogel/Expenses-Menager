@@ -4,9 +4,12 @@ window.onkeydown = (event) => { //preventing submit on enter click
 }
 
 
-var valid_login = false;
-var valid_password = false;
-var valid_email = false;
+let valid_login = false;
+let valid_password = false;
+let valid_email = false;
+const valid_color = '#53bf19';
+const not_valid_color = '#db764b';
+
 
 window.onload = () => {
 
@@ -30,13 +33,13 @@ window.onload = () => {
 
         info = document.getElementById("log_validate_info");
         if( !login_already_exists && login_not_empty ) {
-            info.style.backgroundColor = "#53bf19";
+            info.style.backgroundColor = valid_color;
             info.innerHTML = "";
             valid_login = true;
             inputsValidationCheck();
         }
         else {
-            info.style.backgroundColor = "red";
+            info.style.backgroundColor = not_valid_color;
             if( login_already_exists )
                 info.innerHTML = " # login exists";
             else
@@ -56,13 +59,13 @@ window.onload = () => {
 
         info = document.getElementById("pass_validate_info");
         if( validation ) {
-            info.style.backgroundColor = "#53bf19";
+            info.style.backgroundColor = valid_color;
             info.innerHTML = "";
             valid_password = true;
             inputsValidationCheck();
         }
         else {
-            info.style.backgroundColor = "red";
+            info.style.backgroundColor = not_valid_color;
             info.innerHTML = " # password need to have at least 8 characters.<br/> One uppercase and one digit";
             valid_password = false;
         }
@@ -85,7 +88,7 @@ window.onload = () => {
 
         info = document.getElementById("mail_validate_info");
         if( validation && !email_already_exists ) {
-            info.style.backgroundColor = "#53bf19";
+            info.style.backgroundColor = valid_color;
             info.innerHTML = "";
             valid_email = true;
             inputsValidationCheck();
